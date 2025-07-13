@@ -22,7 +22,7 @@ I’m an **undergraduate Computer Engineering student** passionate about:
 ## 🔗 Live Demo
 
 You can view the live version here:  
-📎 (https://ruchidissa.github.io/Ruchira_Dissanayaka-portfolio)
+📎 https://ruchidissa.github.io/ruchira-dissanayaka.github.io/
 
 > *(Make sure GitHub Pages is enabled in your repo settings)*
 

@@ -1,189 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ruchira Dissanayaka | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="images/profile.jpg" alt="Profile Picture" class="profi">
-    <div>
-      <h1>Ruchira Dissanayaka</h1>
-      <p>Undergraduate Computer Engineering Student | Full-stack & Mobile Developer</p>
-    </div>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a passionate and dedicated computer engineering student with experience in mobile apps, system-level simulations,
-      networking, and UI/UX design. I enjoy solving real-world problems and continuously improving my skill set.
-    </p>
-  </section>
+<!-- HERO -->
+<header class="hero">
+  <img src="images/profile.jpg" class="profi">
+  <h1>Ruchira Dissanayaka</h1>
+  <p>Computer Engineer • Full Stack • AI • Mobile</p>
+</header>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Flutter & Dart</li>
-      <li>C, C++, Java, C#</li>
-      <li>MATLAB, MySQL</li>
-      <li>UI/UX Design, Illustrator</li>
-    </ul>
-  </section>
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Me</h2>
+  <p class="center">
+    I’m a computer engineering student passionate about building intelligent systems,
+    full-stack applications, and clean user experiences that solve real problems.
+  </p>
+</section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+<!-- SKILLS -->
+<section class="section">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <span>HTML / CSS / JavaScript</span>
+    <span>Python & Machine Learning</span>
+    <span>Flutter & Dart</span>
+    <span>C / C++ / Java / C#</span>
+    <span>MySQL & MATLAB</span>
+    <span>UI / UX Design</span>
+  </div>
+</section>
 
-    <div class="project">
-      <h3>📱 Dictionary App in Flutter</h3>
-      <img src="images/dictionary/dichome.jpg" alt="Dictionary App Main UI" class="project-img-main">
+<!-- PROJECTS -->
+<section class="section">
+  <h2>Projects</h2>
 
-      <div class="project-subimages hidden">
-        <img src="images/dictionary/dicload.jpg" alt="Loading Screen" class="project-img-thumb">
-        <img src="images/dictionary/dicdrawer.jpg" alt="Drawer View" class="project-img-thumb">
-        <img src="images/dictionary/diclistw.jpg" alt="Word List" class="project-img-thumb">
-        <img src="images/dictionary/dicadd.jpg" alt="Add Word" class="project-img-thumb">
-        <img src="images/dictionary/dicsearch.jpg" alt="Search Word" class="project-img-thumb">
+  <div class="projects-grid">
+
+    <div class="project-card" onclick="toggleGallery(this)">
+      <img src="images/resumeClassifier/achome.jpeg" class="main-img clickable">
+      <h3>AI Resume Classifier</h3>
+      <p>ML system to classify resumes and match job roles.</p>
+
+      <div class="sub-gallery">
+        <img src="images/resumeClassifier/aclogin.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acupload.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acextract.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acdasboard.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acupfile.jpeg" class="clickable">
+		<img src="images/resumeClassifier/acresult.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acskills.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acfinal.jpeg" class="clickable">
+        <img src="images/resumeClassifier/aceducation.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acexperience.jpeg" class="clickable">
+		<img src="images/resumeClassifier/acreport.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acaboutus.jpeg" class="clickable">
+        <img src="images/resumeClassifier/accontact.jpeg" class="clickable">
+        <img src="images/resumeClassifier/acservice.jpeg" class="clickable">
       </div>
-      <button class="toggle-button">Show More</button>
 
-      <p>A mobile dictionary application with user-friendly UI, built using Flutter and Dart. Includes local word storage and search functionality.</p>
-      <a href="https://github.com/RuchiDissa/dictionary_App_in_flutter" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-      <h3>🌐 FTP Server (Network Design Project)</h3>
-	  
-	  <img src="images/FTP/svlog.png" alt="FTP Server UI" class="project-img-main">
-
-      <div class="project-subimages hidden">
-        <img src="images/FTP/svclient.png" alt="User" class="project-img-thumb">
-        <img src="images/FTP/svdet.png" alt="Features Run" class="project-img-thumb">
-      </div>
-      <button class="toggle-button">Show More</button>
-	  
-      <p>University project to implement a basic FTP server using socket programming principles, demonstrating networking concepts and protocol handling.</p>
-      <a href="https://github.com/RuchiDissa/Computer-Network-Design-and-Application" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-      <h3>🧠 CPU Scheduler Simulation in C/C++</h3>
-      <img src="images/CPU/cpuhome.png" alt="CPU Scheduler UI" class="project-img-main">
-
-      <div class="project-subimages hidden">
-        <img src="images/CPU/cpuschedule.png" alt="Scheduler" class="project-img-thumb">
-        <img src="images/CPU/cpuprem.png" alt="Prem mode" class="project-img-thumb">
-        <img src="images/CPU/cpushowres.png" alt="Show Results" class="project-img-thumb">
-      </div>
-      <button class="toggle-button">Show More</button>
-
-      <p>A simulation of CPU scheduling algorithms (e.g., FCFS, SJF) using C/C++ as part of an Operating Systems course.</p>
-      <a href="https://github.com/RuchiDissa/OperationSytemProject" target="_blank">View on GitHub</a>
+      <a href="https://github.com/RuchiDissa/resume-classifier-ai" target="_blank">GitHub →</a>
     </div>
 
-    <div class="project">
-      <h3>☕ Coffee Shop Management System in C#</h3>
-      <img src="images/coffee/cofhome.png" alt="Coffee Shop Main UI" class="project-img-main">
+    <div class="project-card" onclick="toggleGallery(this)">
+      <img src="images/dictionary/dichome.jpg" class="main-img clickable">
+      <h3>Flutter Dictionary App</h3>
+      <p>Offline dictionary app with fast search.</p>
 
-      <div class="project-subimages hidden">
-        <img src="images/coffee/cofload.png" alt="Loading Screen" class="project-img-thumb">
-        <img src="images/coffee/cofmenu.png" alt="Menu View" class="project-img-thumb">
-        <img src="images/coffee/cofusercon.png" alt="User Control" class="project-img-thumb">
-        <img src="images/coffee/coflogin.png" alt="Login Page" class="project-img-thumb">
-        <img src="images/coffee/cofplaceorder.png" alt="Place Order" class="project-img-thumb">
-        <img src="images/coffee/cofpayment.png" alt="Payment Window" class="project-img-thumb">
-        <img src="images/coffee/cofaddorder.png" alt="Add Order Form" class="project-img-thumb">
-        <img src="images/coffee/cofadminpanel.png" alt="Admin Panel" class="project-img-thumb">
+      <div class="sub-gallery">
+        <img src="images/dictionary/dicsearch.jpg" class="clickable">
+        <img src="images/dictionary/dicadd.jpg" class="clickable">
+        <img src="images/dictionary/diclistw.jpg" class="clickable">
+        <img src="images/dictionary/dicadd.jpg" class="clickable">
+        <img src="images/dictionary/dicsearch.jpg" class="clickable">
       </div>
-      <button class="toggle-button">Show More</button>
 
-      <p>Visual programming project using C# and Windows Forms to manage sales, inventory, and reporting for a small coffee shop.</p>
-      <a href="https://github.com/RuchiDissa/Coffee_shop_project_in_c-" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-      <h3>🚗 Car Park Control System in MATLAB</h3>
-      
-	  <img src="images/carpark/carparkhome.png" alt="CarPark Main UI" class="project-img-main">
-
-      <div class="project-subimages hidden">
-        <img src="images/carPark/c1.png" alt="Entry notify" class="project-img-thumb">
-        <img src="images/carpark/c2.png" alt="Saved Entry" class="project-img-thumb">
-        <img src="images/carpark/c3.png" alt="Entry Exit Input" class="project-img-thumb">
-        <img src="images/carpark/c4.png" alt="Saved Entry Exit" class="project-img-thumb">
-        <img src="images/carpark/c5.png" alt="Daily Avg Status" class="project-img-thumb">
-        <img src="images/carpark/c6.png" alt="Total Revenue" class="project-img-thumb">
-        <img src="images/carpark/c7.png" alt="Carpark status from file" class="project-img-thumb">
-        <img src="images/carpark/c8.png" alt="Saved Format In Exel" class="project-img-thumb">
-		<img src="images/carpark/c9.png" alt="Plot total per day" class="project-img-thumb">
-		<img src="images/carpark/c10.png" alt=" EXTRA : Investment problem" class="project-img-thumb">
-		<img src="images/carpark/c12.png" alt=" EXTRA : Area of carparl" class="project-img-thumb">
-      </div>
-      <button class="toggle-button">Show More</button>
-	  
-      <p>Control system simulation developed in MATLAB for managing entry and exit operations in a smart car parking system.</p>
-      <a href="https://github.com/RuchiDissa/CarParkControl_in_matlab" target="_blank">View on GitHub</a>
-    </div>
-  </section>
-
-	<div class="project">
-      <h3>🎮 Tic-Tac-Toe (Ai Logic Project)</h3>
-	  
-	  <img src="images/tictactoe/tichome.png" alt="Game Play GUI" class="project-img-main">
-
-      <div class="project-subimages hidden">
-        <img src="images/tictactoe/ticnew.png" alt="User" class="project-img-thumb">
-        <img src="images/tictactoe/ticplay.png" alt="Features Run" class="project-img-thumb">
-      </div>
-      <button class="toggle-button">Show More</button>
-	  
-      <p>Self learning project developed in python and Tkinter, paly game again Ai player</p>
-      <a href="https://github.com/RuchiDissa/Tic-Tac-Toe" target="_blank">View on GitHub</a>
+      <a href="https://github.com/RuchiDissa/dictionary_App_in_flutter" target="_blank">GitHub →</a>
     </div>
 	
-	<div class="project">
-      <h3>🎮 Calculator (Basic Arithmetic Operations)</h3>
-	  
-	  <img src="images/calculator/calhome.png" alt="Game Play GUI" class="project-img-main">
+	<div class="project-card" onclick="toggleGallery(this)">
+      <img src="images/coffee/cofhome.png" class="main-img clickable">
+      <h3>Coffiee Shop Management In C#</h3>
+      <p>Visual programming project using C# and Windows Forms to manage sales, inventory, and reporting for a small coffee shop.</p>
+
+      <div class="sub-gallery">
+        <img src="images/coffee/cofload.png" class="clickable">
+        <img src="images/coffee/cofmenu.png" class="clickable">
+        <img src="images/coffee/cofusercon.png" class="clickable">
+        <img src="images/coffee/coflogin.png" class="clickable">
+        <img src="images/coffee/cofplaceorder.png" class="clickable">
+        <img src="images/coffee/cofpayment.png" class="clickable">
+        <img src="images/coffee/cofaddorder.png" class="clickable">
+        <img src="images/coffee/cofadminpanel.png" class="clickable">
+      </div>
+
+      <a href="https://github.com/RuchiDissa/Coffee_shop_project_in_c-" target="_blank">GitHub →</a>
+    </div>
+	
+	<div class="project-card" onclick="toggleGallery(this)">
+      <img src="images/carpark/carparkhome.png" class="main-img clickable">
+      <h3>Car Park System Control in MATLAB</h3>
+      <p>Control system simulation developed in MATLAB for managing entry and exit operations in a smart car parking system.</p>
+
+      <div class="sub-gallery">
+        <img src="images/carPark/c1.png" class="clickable">
+        <img src="images/carpark/c2.png" class="clickable">
+        <img src="images/carpark/c3.png" class="clickable">
+        <img src="images/carpark/c4.png" class="clickable">
+        <img src="images/carpark/c5.png" class="clickable">
+        <img src="images/carpark/c6.png" class="clickable">
+        <img src="images/carpark/c7.png" class="clickable">
+        <img src="images/carpark/c8.png" class="clickable">
+		<img src="images/carpark/c9.png" class="clickable">
+		<img src="images/carpark/c10.png" class="clickable">
+		<img src="images/carpark/c12.png" class="clickable">
+      </div>
+
+      <a href="https://github.com/RuchiDissa/CarParkControl_in_matlab" target="_blank">GitHub →</a>
+    </div>
+	
+	<div class="project-card" onclick="toggleGallery(this)">
+      <img src="images/language_website/hm.jpeg" class="main-img clickable">
+      <h3>Language Academy Website</h3>
+      <p>Sample website made for language academy online platform</p>
+
+      <div class="sub-gallery">
+        <img src="images/language_website/lan.jpeg" class="clickable">
+        <img src="images/language_website/pu.jpeg" class="clickable">
+        <img src="images/language_website/reg.jpeg" class="clickable">
+        <img src="images/language_website/sub.jpeg" class="clickable">
+      </div>
+
+      <a href="https://github.com/RuchiDissa/sampleWebsite" target="_blank">GitHub →</a>
+    </div>
+	
+	<div class="project-card" onclick="toggleGallery(this)">
+      <img src="images/MerchStore/hm.jpeg" class="main-img clickable">
+      <h3>Merch Store Website</h3>
+      <p>Sample website made for online merch store</p>
+
+      <div class="sub-gallery">
+        <img src="images/MerchStore/pr.jpeg" class="clickable">
+        <img src="images/MerchStore/con.jpeg" class="clickable">
+        <img src="images/MerchStore/ab.jpeg" class="clickable">
+        <img src="images/MerchStore/ser.jpeg" class="clickable">
+      </div>
+
+      <a href="https://github.com/RuchiDissa/merchStore" target="_blank">GitHub →</a>
+    </div>
+	
+	<div class="project-card" onclick="toggleGallery(this)">
+      <img src="images/tictactoe/tichome.png" class="main-img clickable">
+      <h3>Tic-Tac-Toe (Ai Logic Project)</h3>
+      <p>Self learning project developed in python and Tkinter, paly game again Ai player</p>
+
+      <div class="sub-gallery">
+        <img src="images/tictactoe/ticnew.png" class="clickable">
+        <img src="images/tictactoe/ticplay.png" class="clickable">
+      </div>
+
+      <a href="https://github.com/RuchiDissa/Tic-Tac-Toe" target="_blank">GitHub →</a>
+    </div>
+	
+	<div class="project-card" onclick="toggleGallery(this)">
+      <img src="images/calculator/calhome.png" class="main-img clickable">
+      <h3>Calculator (Basic Arithmetic Operations)</h3>
       <p>Self learning project developed in python and Tkinter</p>
-      <a href="https://github.com/RuchiDissa/Basic_calculator" target="_blank">View on GitHub</a>
+
+      <a href="https://github.com/RuchiDissa/Basic_calculator" target="_blank">GitHub →</a>
     </div>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:ruchiradissanayaka2@gmail.com">ruchiradissanayaka2@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/ruchira-dissanayaka-b634b21a5" target="_blank">ruchira-dissanayaka</a></p>
-    <p>GitHub: <a href="https://github.com/RuchiDissa" target="_blank">RuchiDissa</a></p>
-	<p>WhatsApp: <a href="https://wa.me/94763976107" target="_blank">+94 76 397 6107</a></p>
-  </section>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
+  <h2>Contact Me</h2>
+
+  <div class="contact-box">
+    <p>Let’s build something amazing together.</p>
+
+    <div class="contact-links">
+      <a href="mailto:ruchiradissanayaka@email.com">📧 Email</a>
+      <a href="https://github.com/RuchiDissa" target="_blank">💻 GitHub</a>
+      <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <p>&copy; 2025 Ruchira Dissanayaka</p>
+  © 2025 Ruchira Dissanayaka
 </footer>
 
-<!-- JS embedded directly -->
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+</div>
+
+<!-- SCRIPT -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".toggle-button");
-
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
-        const subimages = button.previousElementSibling;
-
-        if (subimages.classList.contains("hidden")) {
-          subimages.classList.remove("hidden");
-          button.textContent = "Show Less";
-        } else {
-          subimages.classList.add("hidden");
-          button.textContent = "Show More";
-        }
-      });
-    });
+function toggleGallery(card) {
+  document.querySelectorAll('.project-card').forEach(c => {
+    if (c !== card) c.classList.remove('active');
   });
+  card.classList.toggle('active');
+}
+
+// Lightbox
+document.querySelectorAll('.clickable').forEach(img => {
+  img.addEventListener('click', e => {
+    e.stopPropagation();
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').classList.add('show');
+  });
+});
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+}
 </script>
+
 </body>
 </html>
-

@@ -239,35 +239,41 @@ a {
 
 .guide-video {
   text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .guide-video-box {
-  max-width: 650px; /* smaller video area */
+  width: 100%;
+  max-width: 650px;
   margin: 0 auto;
   padding: 12px;
 
   background: var(--card);
 
   border: 1px solid var(--border);
-
   border-radius: 14px;
 
   box-shadow:
     0 12px 35px rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
 }
 
 .guide-video-player {
-  width: 100%;
-  height: auto;
-  max-height: 365px;
-
   display: block;
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 
   border-radius: 10px;
 
   background: #000;
 
   border: 1px solid var(--border);
+
+  box-sizing: border-box;
 }
 
 .guide-video-text {

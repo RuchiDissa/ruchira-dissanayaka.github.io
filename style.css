@@ -787,3 +787,173 @@ footer {
 }
 
 }
+/* =========================
+   PROJECT DEPLOY VIDEOS
+========================= */
+
+.project-videos-section {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-videos-intro {
+  max-width: 700px;
+  margin: 0 auto 35px;
+
+  color: var(--muted);
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   VIDEO GRID
+========================= */
+
+.project-videos-grid {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =========================
+   VIDEO CARD
+========================= */
+
+.project-video-card {
+  min-width: 0;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  text-align: left;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-video-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--accent);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.project-video-player {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: contain;
+
+  background: #000;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   VIDEO CONTENT
+========================= */
+
+.project-video-content {
+  padding: 18px;
+}
+
+.project-video-content h3 {
+  margin: 0 0 10px;
+
+  color: var(--text);
+
+  font-size: 1.1rem;
+}
+
+.project-video-content p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+  .project-videos-grid {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .project-videos-grid {
+    width: 100%;
+    padding: 0 10px;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    box-sizing: border-box;
+  }
+
+  .project-video-card {
+    width: 100%;
+  }
+
+  .project-video-content {
+    padding: 15px;
+  }
+
+  .project-video-content h3 {
+    font-size: 1rem;
+  }
+
+  .project-video-content p {
+    font-size: 0.82rem;
+  }
+
+}

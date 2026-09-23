@@ -242,9 +242,9 @@ a {
 }
 
 .guide-video-box {
-  max-width: 900px;
+  max-width: 650px; /* smaller video area */
   margin: 0 auto;
-  padding: 18px;
+  padding: 12px;
 
   background: var(--card);
 
@@ -258,7 +258,8 @@ a {
 
 .guide-video-player {
   width: 100%;
-  max-height: 500px;
+  height: auto;
+  max-height: 365px;
 
   display: block;
 
@@ -270,13 +271,13 @@ a {
 }
 
 .guide-video-text {
-  margin-top: 15px;
+  margin-top: 12px;
 
   color: var(--muted);
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 
-  line-height: 1.6;
+  line-height: 1.5;
 }
 /* =========================
    PROJECTS

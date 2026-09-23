@@ -14,6 +14,7 @@
   --muted: #94a3b8;
 }
 
+
 /* =========================
    GLOBAL
 ========================= */
@@ -26,17 +27,29 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
   font-family: Arial, Helvetica, sans-serif;
+
   background: var(--dark);
   color: var(--text);
+
   line-height: 1.6;
 }
 
 img {
   display: block;
+  max-width: 100%;
+}
+
+video {
+  max-width: 100%;
 }
 
 a {
@@ -120,7 +133,6 @@ a {
 
 .section {
   width: 100%;
-
   max-width: 1200px;
 
   margin: 0 auto;
@@ -233,51 +245,144 @@ a {
   color: white;
 }
 
+
 /* =========================
-   GUIDE VIDEO
+   PROJECT DEPLOY VIDEOS
 ========================= */
 
-.guide-video {
-  text-align: center;
+.project-videos-section {
   width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
   overflow: hidden;
 }
 
-.guide-video-box {
+.project-videos-intro {
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
+
+  margin: 0 auto 35px;
+
+  color: var(--muted);
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   VIDEO GRID
+========================= */
+
+.project-videos-grid {
+  width: 100%;
+  max-width: 1000px;
+
   margin: 0 auto;
-  padding: 12px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   VIDEO CARD
+========================= */
+
+.project-video-card {
+  width: 100%;
+  min-width: 0;
 
   background: var(--card);
 
   border: 1px solid var(--border);
+
   border-radius: 14px;
 
-  box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  text-align: left;
 
   box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
-.guide-video-player {
+.project-video-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(56, 189, 248, 0.6);
+
+  background: var(--card-hover);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   VIDEO PLAYER
+========================= */
+
+.project-video-player {
   display: block;
 
   width: 100%;
   max-width: 100%;
+
   height: auto;
 
-  border-radius: 10px;
+  aspect-ratio: 16 / 9;
+
+  object-fit: contain;
 
   background: #000;
 
-  border: 1px solid var(--border);
+  border: 0;
 
   box-sizing: border-box;
 }
 
-.guide-video-text {
-  margin-top: 12px;
+
+/* =========================
+   VIDEO CONTENT
+========================= */
+
+.project-video-content {
+  width: 100%;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+}
+
+.project-video-content h3 {
+  margin: 0 0 8px;
+
+  color: #f8fafc;
+
+  font-size: 1.05rem;
+
+  line-height: 1.35;
+}
+
+.project-video-content p {
+  margin: 0;
 
   color: var(--muted);
 
@@ -285,6 +390,8 @@ a {
 
   line-height: 1.5;
 }
+
+
 /* =========================
    PROJECTS
 ========================= */
@@ -661,17 +768,13 @@ footer {
 
     gap: 18px;
   }
-  .guide-video-box {
-  padding: 10px;
-}
 
-.guide-video-player {
-  max-height: 350px;
-}
+  .project-videos-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
-.guide-video-text {
-  font-size: 0.82rem;
-}
+    gap: 18px;
+  }
 
 }
 
@@ -690,7 +793,6 @@ footer {
 
   .profi {
     width: 115px;
-
     height: 115px;
 
     margin-bottom: 15px;
@@ -735,6 +837,32 @@ footer {
     gap: 16px;
   }
 
+  .project-videos-grid {
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    padding: 0;
+
+    gap: 20px;
+  }
+
+  .project-video-card {
+    width: 100%;
+  }
+
+  .project-video-content {
+    padding: 14px;
+  }
+
+  .project-video-content h3 {
+    font-size: 1rem;
+  }
+
+  .project-video-content p {
+    font-size: 0.82rem;
+  }
+
   .main-img {
     height: 210px;
   }
@@ -742,17 +870,6 @@ footer {
   .contact-links {
     gap: 8px;
   }
-  .guide-video-box {
-  padding: 10px;
-}
-
-.guide-video-player {
-  max-height: 350px;
-}
-
-.guide-video-text {
-  font-size: 0.82rem;
-}
 
 }
 
@@ -774,163 +891,9 @@ footer {
   .hero h1 {
     font-size: 1.8rem;
   }
-  .guide-video-box {
-  padding: 10px;
-}
-
-.guide-video-player {
-  max-height: 350px;
-}
-
-.guide-video-text {
-  font-size: 0.82rem;
-}
-
-}
-/* =========================
-   PROJECT DEPLOY VIDEOS
-========================= */
-
-.project-videos-section {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  overflow: hidden;
-}
-
-.project-videos-section h2 {
-  margin-bottom: 10px;
-}
-
-.project-videos-intro {
-  max-width: 700px;
-  margin: 0 auto 35px;
-
-  color: var(--muted);
-
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-
-/* =========================
-   VIDEO GRID
-========================= */
-
-.project-videos-grid {
-  width: 100%;
-  max-width: 1000px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 25px;
-
-  box-sizing: border-box;
-}
-
-
-/* =========================
-   VIDEO CARD
-========================= */
-
-.project-video-card {
-  width: 100%;
-  min-width: 0;
-
-  background: var(--card);
-
-  border: 1px solid var(--border);
-
-  border-radius: 14px;
-
-  overflow: hidden;
-
-  text-align: left;
-
-  box-sizing: border-box;
-
-  transition: transform 0.3s ease,
-              border-color 0.3s ease,
-              box-shadow 0.3s ease;
-}
-
-.project-video-card:hover {
-  transform: translateY(-5px);
-
-  border-color: var(--accent);
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-}
-
-
-/* =========================
-   VIDEO
-========================= */
-
-.project-video-player {
-  display: block;
-
-  width: 100%;
-  max-width: 100%;
-
-  height: auto;
-
-  aspect-ratio: 16 / 9;
-
-  object-fit: contain;
-
-  background: #000;
-
-  border: none;
-
-  box-sizing: border-box;
-}
-
-
-/* =========================
-   VIDEO TEXT
-========================= */
-
-.project-video-content {
-  padding: 16px;
-}
-
-.project-video-content h3 {
-  margin: 0 0 8px;
-
-  color: var(--text);
-
-  font-size: 1.05rem;
-}
-
-.project-video-content p {
-  margin: 0;
-
-  color: var(--muted);
-
-  font-size: 0.85rem;
-
-  line-height: 1.5;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
 
   .project-videos-grid {
     grid-template-columns: 1fr;
-
-    padding: 0 10px;
-
-    gap: 20px;
   }
 
 }

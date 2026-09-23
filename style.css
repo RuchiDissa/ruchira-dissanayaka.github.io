@@ -43,12 +43,9 @@ body {
   line-height: 1.6;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
+img,
 video {
+  display: block;
   max-width: 100%;
 }
 
@@ -62,6 +59,7 @@ a {
 ========================= */
 
 .hero {
+  width: 100%;
   min-height: 68vh;
 
   background:
@@ -198,6 +196,8 @@ a {
 ========================= */
 
 .skills-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -246,9 +246,141 @@ a {
 }
 
 
+/* =========================================================
+   GUIDE VIDEO
+   USES YOUR EXISTING HTML
+========================================================= */
+
+/*
+Existing HTML:
+
+<section class="section guide-video">
+
+  <h2>Portfolio Guide</h2>
+
+  <div class="guide-video-box">
+
+    <video class="guide-video-player">
+      ...
+    </video>
+
+    <p class="guide-video-text">
+      ...
+    </p>
+
+  </div>
+
+</section>
+*/
+
+
+.guide-video {
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
 /* =========================
-   PROJECT DEPLOY VIDEOS
+   GUIDE VIDEO CARD / FRAME
 ========================= */
+
+.guide-video-box {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 0;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.35);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.guide-video-box:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(56, 189, 248, 0.6);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   GUIDE VIDEO
+========================= */
+
+.guide-video-player {
+  display: block;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  height: auto;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: contain;
+
+  background: #000;
+
+  border: 0;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* =========================
+   GUIDE VIDEO TEXT
+========================= */
+
+.guide-video-text {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 18px 20px;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+
+  text-align: center;
+
+  background: var(--card);
+}
+
+
+/* =========================================================
+   PROJECT DEPLOY VIDEOS
+========================================================= */
 
 .project-videos-section {
   width: 100%;
@@ -336,13 +468,14 @@ a {
 
 
 /* =========================
-   VIDEO PLAYER
+   PROJECT VIDEO PLAYER
 ========================= */
 
 .project-video-player {
   display: block;
 
   width: 100%;
+
   max-width: 100%;
 
   height: auto;
@@ -360,7 +493,7 @@ a {
 
 
 /* =========================
-   VIDEO CONTENT
+   PROJECT VIDEO CONTENT
 ========================= */
 
 .project-video-content {
@@ -392,11 +525,13 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    PROJECTS
-========================= */
+========================================================= */
 
 .projects-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -408,6 +543,9 @@ a {
 }
 
 .project-card {
+  width: 100%;
+  min-width: 0;
+
   background: var(--card);
 
   border: 1px solid rgba(30, 41, 59, 0.9);
@@ -569,11 +707,13 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
 .contact {
+  width: 100%;
+
   max-width: 100%;
 
   margin-top: 15px;
@@ -589,6 +729,8 @@ a {
 }
 
 .contact-box {
+  width: 100%;
+
   max-width: 650px;
 
   margin: 0 auto;
@@ -651,9 +793,9 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    LIGHTBOX
-========================= */
+========================================================= */
 
 .lightbox {
   position: fixed;
@@ -731,11 +873,13 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
+  width: 100%;
+
   text-align: center;
 
   padding: 18px;
@@ -748,9 +892,9 @@ footer {
 }
 
 
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -762,6 +906,19 @@ footer {
     padding: 45px 25px;
   }
 
+  /* GUIDE VIDEO */
+
+  .guide-video {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .guide-video-box {
+    max-width: 750px;
+  }
+
+  /* PROJECTS */
+
   .projects-grid {
     grid-template-columns:
       repeat(2, 1fr);
@@ -769,19 +926,20 @@ footer {
     gap: 18px;
   }
 
+  /* PROJECT VIDEOS */
+
   .project-videos-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
 
     gap: 18px;
   }
-
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 650px) {
 
@@ -818,6 +976,48 @@ footer {
     margin-bottom: 20px;
   }
 
+
+  /* =========================
+     GUIDE VIDEO MOBILE
+  ========================= */
+
+  .guide-video {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 38px 15px;
+  }
+
+  .guide-video-box {
+    width: 100%;
+
+    max-width: 100%;
+
+    border-radius: 14px;
+  }
+
+  .guide-video-player {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+  }
+
+  .guide-video-text {
+    padding: 14px 15px;
+
+    font-size: 0.82rem;
+  }
+
+
+  /* =========================
+     SKILLS
+  ========================= */
+
   .skills-grid {
     grid-template-columns:
       repeat(2, 1fr);
@@ -831,11 +1031,21 @@ footer {
     font-size: 0.78rem;
   }
 
+
+  /* =========================
+     PROJECTS
+  ========================= */
+
   .projects-grid {
     grid-template-columns: 1fr;
 
     gap: 16px;
   }
+
+
+  /* =========================
+     PROJECT VIDEOS
+  ========================= */
 
   .project-videos-grid {
     grid-template-columns: 1fr;
@@ -849,6 +1059,18 @@ footer {
 
   .project-video-card {
     width: 100%;
+
+    max-width: 100%;
+  }
+
+  .project-video-player {
+    width: 100%;
+
+    max-width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    height: auto;
   }
 
   .project-video-content {
@@ -863,37 +1085,81 @@ footer {
     font-size: 0.82rem;
   }
 
+
+  /* =========================
+     PROJECT IMAGE
+  ========================= */
+
   .main-img {
     height: 210px;
   }
 
+
+  /* =========================
+     CONTACT
+  ========================= */
+
   .contact-links {
     gap: 8px;
   }
-
 }
 
 
-/* =========================
+/* =========================================================
    SMALL MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 400px) {
 
   .hero {
     min-height: 55vh;
-  }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .hero h1 {
     font-size: 1.8rem;
   }
 
-  .project-videos-grid {
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+
+  /* GUIDE VIDEO */
+
+  .guide-video {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .guide-video-box {
+    border-radius: 12px;
+  }
+
+  .guide-video-text {
+    padding: 12px;
+
+    font-size: 0.78rem;
+  }
+
+
+  /* SKILLS */
+
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 
+
+  /* PROJECT VIDEOS */
+
+  .project-videos-grid {
+    grid-template-columns: 1fr;
+  }
 }

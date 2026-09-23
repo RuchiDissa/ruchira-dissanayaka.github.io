@@ -1,0 +1,10 @@
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$("#year").textContent=new Date().getFullYear();
+const glow=$(".cursor-glow");addEventListener("pointermove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"});
+const menu=$(".menu"),mn=$(".mobile-nav");menu.onclick=()=>mn.classList.toggle("open");$$(".mobile-nav a").forEach(a=>a.onclick=()=>mn.classList.remove("open"));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.1});$$(".reveal").forEach(e=>io.observe(e));
+const filters=$$(".filters button"),cards=$$(".project-card");filters.forEach(f=>f.onclick=()=>{filters.forEach(x=>x.classList.remove("active"));f.classList.add("active");let v=f.dataset.filter;cards.forEach(c=>{let cat=c.dataset.category,ok=v==="all"||cat===v;c.classList.toggle("hide",!ok)})});
+const modal=$(".modal"),mi=$("#mimg"),mt=$("#mtitle"),md=$("#mdesc"),ms=$("#mstack"),ml=$("#mlink");
+$$(".details").forEach(b=>b.onclick=()=>{let c=b.closest(".project-card");mi.src=c.dataset.image;mt.textContent=c.dataset.title;md.textContent=c.dataset.description;ms.textContent=c.dataset.stack;ml.href=c.dataset.link;modal.classList.add("open");modal.setAttribute("aria-hidden","false")});
+function close(){modal.classList.remove("open");modal.setAttribute("aria-hidden","true")}$(".close").onclick=close;$(".backdrop").onclick=close;addEventListener("keydown",e=>e.key==="Escape"&&close());
+const navLinks=$$("nav a"), secs=$$("main section[id]");const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-35% 0px -55%"});secs.forEach(s=>so.observe(s));

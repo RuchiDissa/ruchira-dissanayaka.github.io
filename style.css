@@ -233,7 +233,51 @@ a {
   color: white;
 }
 
+/* =========================
+   GUIDE VIDEO
+========================= */
 
+.guide-video {
+  text-align: center;
+}
+
+.guide-video-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.guide-video-player {
+  width: 100%;
+  max-height: 500px;
+
+  display: block;
+
+  border-radius: 10px;
+
+  background: #000;
+
+  border: 1px solid var(--border);
+}
+
+.guide-video-text {
+  margin-top: 15px;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+}
 /* =========================
    PROJECTS
 ========================= */
@@ -610,6 +654,17 @@ footer {
 
     gap: 18px;
   }
+  .guide-video-box {
+  padding: 10px;
+}
+
+.guide-video-player {
+  max-height: 350px;
+}
+
+.guide-video-text {
+  font-size: 0.82rem;
+}
 
 }
 
@@ -680,6 +735,17 @@ footer {
   .contact-links {
     gap: 8px;
   }
+  .guide-video-box {
+  padding: 10px;
+}
+
+.guide-video-player {
+  max-height: 350px;
+}
+
+.guide-video-text {
+  font-size: 0.82rem;
+}
 
 }
 
@@ -701,5 +767,16 @@ footer {
   .hero h1 {
     font-size: 1.8rem;
   }
+  .guide-video-box {
+  padding: 10px;
+}
+
+.guide-video-player {
+  max-height: 350px;
+}
+
+.guide-video-text {
+  font-size: 0.82rem;
+}
 
 }

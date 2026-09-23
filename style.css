@@ -794,14 +794,21 @@ footer {
 .project-videos-section {
   width: 100%;
   max-width: 100%;
+  margin: 0 auto;
   text-align: center;
   overflow: hidden;
 }
 
+.project-videos-section h2 {
+  margin-bottom: 10px;
+}
+
 .project-videos-intro {
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 0 auto 35px;
+
   color: var(--muted);
+
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -838,6 +845,7 @@ footer {
   background: var(--card);
 
   border: 1px solid var(--border);
+
   border-radius: 14px;
 
   overflow: hidden;
@@ -846,7 +854,9 @@ footer {
 
   box-sizing: border-box;
 
-  transition: 0.3s ease;
+  transition: transform 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
 }
 
 .project-video-card:hover {
@@ -854,13 +864,12 @@ footer {
 
   border-color: var(--accent);
 
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 
 /* =========================
-   VIDEO PLAYER
+   VIDEO
 ========================= */
 
 .project-video-player {
@@ -884,7 +893,7 @@ footer {
 
 
 /* =========================
-   VIDEO INFORMATION
+   VIDEO TEXT
 ========================= */
 
 .project-video-content {
@@ -919,15 +928,9 @@ footer {
   .project-videos-grid {
     grid-template-columns: 1fr;
 
-    width: 100%;
-
     padding: 0 10px;
 
     gap: 20px;
-  }
-
-  .project-video-card {
-    width: 100%;
   }
 
 }

@@ -1,710 +1,1340 @@
-/* =========================================================
-   PROJECT VIEW IMPROVEMENT
-   Keep existing portfolio design
-   ========================================================= */
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* ---------------------------------------------------------
-   PROJECT CARD IMAGE
---------------------------------------------------------- */
+  <title>Ruchira Dissanayaka | Computer Engineer</title>
 
-.project-image {
-    position: relative;
-    height: 250px;
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+<body>
 
-    overflow: hidden;
+<!-- =========================
+     HERO SECTION
+========================= -->
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(89,216,255,.06),
-            transparent 65%
-        ),
-        #080e19;
-}
+<header class="hero">
 
+  <img src="images/profile.jpg" class="profi" alt="Ruchira Dissanayaka">
 
-.project-image img {
-    width: 100%;
-    height: 100%;
+  <h1>Ruchira Dissanayaka</h1>
 
-    object-fit: cover;
+  <p>
+    Computer Engineering Graduate • Full-Stack Development • AI Systems • Mobile Applications
+  </p>
 
-    display: block;
+</header>
 
-    transition:
-        transform .45s ease,
-        opacity .3s ease;
-}
 
+<!-- =========================
+     ABOUT SECTION
+========================= -->
 
-/* Portrait/mobile screenshot */
+<section class="section">
 
-.project-image img.portrait-image {
+  <h2>About Me</h2>
 
-    width: auto;
-    max-width: 100%;
+  <p class="center">
+    I am a Computer Engineering graduate with a strong interest in Full-Stack Development,
+    Artificial Intelligence, Machine Learning, and Mobile Application Development.
+    I enjoy transforming ideas into practical software solutions by combining
+    programming, system design, intelligent technologies, and user-focused interfaces.
+  </p>
 
-    height: 100%;
+  <p class="center">
+    My experience includes developing web applications, AI-based systems, desktop
+    applications, mobile applications, and engineering projects using technologies
+    such as Python, Flask, JavaScript, Flutter, C#, C++, Java, SQL, and MATLAB.
+    I am continuously improving my technical skills through personal projects,
+    practical development, and self-learning.
+  </p>
 
-    object-fit: contain;
+</section>
 
-    padding: 12px;
-}
 
+<!-- =========================
+     AREAS OF INTEREST
+========================= -->
 
-/* Mobile category */
+<section class="section">
 
-.project-card[data-category="mobile"]
-.project-image img {
+  <h2>Areas of Interest</h2>
 
-    width: auto;
-    max-width: 100%;
+  <div class="skills-grid">
 
-    height: 100%;
+    <span>Full-Stack Web Development</span>
 
-    object-fit: contain;
+    <span>Artificial Intelligence & Machine Learning</span>
 
-    padding: 12px;
-}
+    <span>Backend & API Development</span>
 
+    <span>Mobile Application Development</span>
 
-/* Hover */
+    <span>Database Systems</span>
 
-.project-card:hover
-.project-image img {
+    <span>Software Engineering</span>
 
-    transform: scale(1.035);
-}
+  </div>
 
+</section>
 
-/* Don't zoom portrait screenshots */
 
-.project-card:hover
-.project-image img.portrait-image {
+<!-- =========================
+     TECHNICAL SKILLS
+========================= -->
 
-    transform: scale(1.015);
-}
+<section class="section">
 
+  <h2>Technical Skills</h2>
 
-/* ---------------------------------------------------------
-   PROJECT MODAL
---------------------------------------------------------- */
+  <div class="skills-grid">
 
-.modal-card.project-modal {
+    <span>HTML / CSS / JavaScript</span>
 
-    width: min(1050px, 95vw);
+    <span>Python / Flask</span>
 
-    max-height: 92vh;
+    <span>Machine Learning / NLP</span>
 
-    overflow-y: auto;
+    <span>Flutter / Dart</span>
 
-    background:
-        radial-gradient(
-            circle at 90% 0,
-            rgba(89,216,255,.055),
-            transparent 35%
-        ),
-        #0c1320;
+    <span>C / C++ / Java / C#</span>
 
-    border: 1px solid rgba(89,216,255,.18);
+    <span>MySQL / SQLite</span>
 
-    border-radius: 22px;
+    <span>Git / GitHub</span>
 
-    box-shadow:
-        0 35px 100px rgba(0,0,0,.55);
-}
+    <span>MATLAB</span>
 
+    <span>REST APIs</span>
 
-/* ---------------------------------------------------------
-   MAIN PROJECT GALLERY
---------------------------------------------------------- */
+    <span>UI / UX Design</span>
 
-.project-gallery {
+  </div>
 
-    position: relative;
+</section>
 
-    width: 100%;
+<!-- =========================
+     GUIDE VIDEO
+========================= -->
 
-    min-height: 470px;
+<section class="section guide-video">
 
-    display: flex;
+  <h2>Portfolio Guide</h2>
 
-    align-items: center;
-    justify-content: center;
+  <div class="guide-video-box">
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(89,216,255,.04),
-            transparent 65%
-        ),
-        #030712;
+    <video
+      class="guide-video-player"
+      controls
+      preload="metadata"
+      poster="images/profile.jpg"
+    >
+      <source src="videos/Guide_video.mp4" type="video/mp4">
 
-    overflow: hidden;
+      Your browser does not support the video tag.
+    </video>
 
-    border-radius: 20px 20px 0 0;
-}
+    <p class="guide-video-text">
+      Take a quick tour of my projects section works.
+    </p>
 
+  </div>
 
-/* Main image wrapper */
+</section>
 
-.gallery-main {
+<!-- =========================
+     PROJECTS SECTION
+========================= -->
 
-    position: relative;
+<section class="section">
 
-    width: 100%;
+  <h2>Projects</h2>
 
-    height: 540px;
+  <div class="projects-grid">
 
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
-}
+    <!-- =========================
+         AI RESUME CLASSIFIER
+    ========================== -->
 
+    <div class="project-card" onclick="toggleGallery(this)">
 
-/* Main image */
+      <img
+        src="images/resumeClassifier/achome.jpeg"
+        class="main-img clickable"
+        alt="AI Resume Classifier"
+      >
 
-.gallery-main img {
+      <h3>AI Resume Classifier & Job Role Matcher</h3>
 
-    width: 100%;
-    height: 100%;
+      <p>
+        AI-powered web application that analyzes resumes, extracts information,
+        identifies skills, and predicts suitable job roles using Natural Language
+        Processing and Machine Learning.
+      </p>
 
-    object-fit: contain;
+      <div class="sub-gallery">
 
-    padding: 24px;
+        <img src="images/resumeClassifier/aclogin.jpeg" class="clickable" alt="Login">
 
-    display: block;
+        <img src="images/resumeClassifier/acupload.jpeg" class="clickable" alt="Upload">
 
-    transition:
-        opacity .2s ease;
-}
+        <img src="images/resumeClassifier/acextract.jpeg" class="clickable" alt="Resume Extraction">
 
+        <img src="images/resumeClassifier/acdasboard.jpeg" class="clickable" alt="Dashboard">
 
-/* ---------------------------------------------------------
-   GALLERY NAVIGATION
---------------------------------------------------------- */
+        <img src="images/resumeClassifier/acupfile.jpeg" class="clickable" alt="Upload File">
 
-.gallery-btn {
+        <img src="images/resumeClassifier/acresult.jpeg" class="clickable" alt="Job Result">
 
-    position: absolute;
+        <img src="images/resumeClassifier/acskills.jpeg" class="clickable" alt="Skills">
 
-    top: 50%;
+        <img src="images/resumeClassifier/acfinal.jpeg" class="clickable" alt="Final Result">
 
-    transform: translateY(-50%);
+        <img src="images/resumeClassifier/aceducation.jpeg" class="clickable" alt="Education">
 
-    z-index: 5;
+        <img src="images/resumeClassifier/acexperience.jpeg" class="clickable" alt="Experience">
 
-    width: 46px;
-    height: 46px;
+        <img src="images/resumeClassifier/acreport.jpeg" class="clickable" alt="Reports">
 
-    display: flex;
+        <img src="images/resumeClassifier/acaboutus.jpeg" class="clickable" alt="About">
 
-    align-items: center;
-    justify-content: center;
+        <img src="images/resumeClassifier/accontact.jpeg" class="clickable" alt="Contact">
 
-    border-radius: 50%;
+        <img src="images/resumeClassifier/acservice.jpeg" class="clickable" alt="Services">
 
-    border: 1px solid rgba(255,255,255,.12);
+      </div>
 
-    background:
-        rgba(7,11,20,.82);
+      <a
+        href="https://github.com/RuchiDissa/resume-classifier-ai"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
 
-    color: #fff;
+    </div>
 
-    font-size: 30px;
 
-    line-height: 1;
+    <!-- =========================
+         FLUTTER DICTIONARY
+    ========================== -->
 
-    cursor: pointer;
+    <div class="project-card" onclick="toggleGallery(this)">
 
-    backdrop-filter: blur(12px);
+      <img
+        src="images/dictionary/dichome.jpg"
+        class="main-img clickable"
+        alt="Flutter Dictionary App"
+      >
 
-    transition:
-        background .2s ease,
-        color .2s ease,
-        transform .2s ease,
-        border-color .2s ease;
-}
+      <h3>Flutter Dictionary App</h3>
 
+      <p>
+        Mobile dictionary application developed with Flutter and Dart,
+        providing fast word searching and an offline-friendly user experience.
+      </p>
 
-.gallery-btn:hover {
+      <div class="sub-gallery">
 
-    background: var(--cyan);
+        <img src="images/dictionary/dicsearch.jpg" class="clickable" alt="Dictionary Search">
 
-    color: #07101a;
+        <img src="images/dictionary/dicadd.jpg" class="clickable" alt="Add Word">
 
-    border-color: var(--cyan);
+        <img src="images/dictionary/diclistw.jpg" class="clickable" alt="Word List">
 
-    transform:
-        translateY(-50%)
-        scale(1.06);
-}
+        <img src="images/dictionary/dicadd.jpg" class="clickable" alt="Add Word">
 
+        <img src="images/dictionary/dicsearch.jpg" class="clickable" alt="Search">
 
-.gallery-prev {
+      </div>
 
-    left: 18px;
-}
+      <a
+        href="https://github.com/RuchiDissa/dictionary_App_in_flutter"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
 
+    </div>
 
-.gallery-next {
 
-    right: 18px;
-}
+    <!-- =========================
+         COFFEE SHOP
+    ========================== -->
 
+    <div class="project-card" onclick="toggleGallery(this)">
 
-/* ---------------------------------------------------------
-   IMAGE COUNTER
---------------------------------------------------------- */
+      <img
+        src="images/coffee/cofhome.png"
+        class="main-img clickable"
+        alt="Coffee Shop Management System"
+      >
 
-.gallery-counter {
+      <h3>Coffee Shop Management System</h3>
 
-    position: absolute;
+      <p>
+        Desktop management application developed using C# and Windows Forms
+        to manage products, orders, sales, inventory, users, and reporting
+        for a small coffee shop.
+      </p>
 
-    left: 50%;
+      <div class="sub-gallery">
 
-    bottom: 16px;
+        <img src="images/coffee/cofload.png" class="clickable" alt="Loading">
 
-    transform: translateX(-50%);
+        <img src="images/coffee/cofmenu.png" class="clickable" alt="Menu">
 
-    padding: 6px 12px;
+        <img src="images/coffee/cofusercon.png" class="clickable" alt="User">
 
-    border: 1px solid rgba(255,255,255,.08);
+        <img src="images/coffee/coflogin.png" class="clickable" alt="Login">
 
-    border-radius: 999px;
+        <img src="images/coffee/cofplaceorder.png" class="clickable" alt="Place Order">
 
-    background:
-        rgba(7,11,20,.82);
+        <img src="images/coffee/cofpayment.png" class="clickable" alt="Payment">
 
-    color: #d9e5f2;
+        <img src="images/coffee/cofaddorder.png" class="clickable" alt="Add Order">
 
-    font:
-        600 9px "JetBrains Mono";
+        <img src="images/coffee/cofadminpanel.png" class="clickable" alt="Admin Panel">
 
-    backdrop-filter: blur(10px);
-}
+      </div>
 
+      <a
+        href="https://github.com/RuchiDissa/Coffee_shop_project_in_c-"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
 
-/* ---------------------------------------------------------
-   THUMBNAILS
---------------------------------------------------------- */
+    </div>
 
-.gallery-thumbs {
 
-    display: flex;
+    <!-- =========================
+         CAR PARK MATLAB
+    ========================== -->
 
-    align-items: center;
+    <div class="project-card" onclick="toggleGallery(this)">
 
-    gap: 10px;
+      <img
+        src="images/carpark/carparkhome.png"
+        class="main-img clickable"
+        alt="Car Park System"
+      >
 
-    width: 100%;
+      <h3>Smart Car Park Control System</h3>
 
-    overflow-x: auto;
+      <p>
+        Control system simulation developed in MATLAB for managing vehicle
+        entry and exit operations in a smart parking environment.
+      </p>
 
-    padding: 14px 18px;
+      <div class="sub-gallery">
 
-    background:
-        rgba(3,7,18,.85);
+        <img src="images/carPark/c1.png" class="clickable" alt="Car Park 1">
 
-    border-top:
-        1px solid rgba(255,255,255,.05);
+        <img src="images/carpark/c2.png" class="clickable" alt="Car Park 2">
 
-    scrollbar-width: thin;
-}
+        <img src="images/carpark/c3.png" class="clickable" alt="Car Park 3">
 
+        <img src="images/carpark/c4.png" class="clickable" alt="Car Park 4">
 
-/* Thumbnail */
+        <img src="images/carpark/c5.png" class="clickable" alt="Car Park 5">
 
-.gallery-thumb {
+        <img src="images/carpark/c6.png" class="clickable" alt="Car Park 6">
 
-    flex: 0 0 82px;
+        <img src="images/carpark/c7.png" class="clickable" alt="Car Park 7">
 
-    width: 82px;
-    height: 60px;
+        <img src="images/carpark/c8.png" class="clickable" alt="Car Park 8">
 
-    padding: 3px;
+        <img src="images/carpark/c9.png" class="clickable" alt="Car Park 9">
 
-    display: block;
+        <img src="images/carpark/c10.png" class="clickable" alt="Car Park 10">
 
-    overflow: hidden;
+        <img src="images/carpark/c12.png" class="clickable" alt="Car Park 12">
 
-    border-radius: 9px;
+      </div>
 
-    border: 1px solid
-        rgba(255,255,255,.09);
+      <a
+        href="https://github.com/RuchiDissa/CarParkControl_in_matlab"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
 
-    background: #0b111d;
+    </div>
 
-    opacity: .55;
 
-    cursor: pointer;
+    <!-- =========================
+         LANGUAGE ACADEMY
+    ========================== -->
 
-    transition:
-        opacity .2s ease,
-        border-color .2s ease,
-        transform .2s ease;
-}
+    <div class="project-card" onclick="toggleGallery(this)">
 
+      <img
+        src="images/language_website/hm.jpeg"
+        class="main-img clickable"
+        alt="Language Academy Website"
+      >
 
-.gallery-thumb:hover {
+      <h3>Language Academy Website</h3>
 
-    opacity: 1;
+      <p>
+        Responsive website concept developed for an online language academy,
+        including course presentation, registration, and user-focused interfaces.
+      </p>
 
-    transform:
-        translateY(-2px);
-}
+      <div class="sub-gallery">
 
+        <img src="images/language_website/lan.jpeg" class="clickable" alt="Language Website">
 
-.gallery-thumb.active {
+        <img src="images/language_website/pu.jpeg" class="clickable" alt="Popup">
 
-    opacity: 1;
+        <img src="images/language_website/reg.jpeg" class="clickable" alt="Registration">
 
-    border-color:
-        var(--cyan);
+        <img src="images/language_website/sub.jpeg" class="clickable" alt="Subscription">
 
-    box-shadow:
-        0 0 0 1px
-        rgba(89,216,255,.12);
-}
+      </div>
 
+      <a
+        href="https://github.com/RuchiDissa/sampleWebsite"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
 
-.gallery-thumb img {
+    </div>
 
-    width: 100%;
-    height: 100%;
 
-    display: block;
+    <!-- =========================
+         MERCH STORE
+    ========================== -->
 
-    object-fit: cover;
+    <div class="project-card" onclick="toggleGallery(this)">
 
-    border-radius: 6px;
-}
+      <img
+        src="images/MerchStore/hm.jpeg"
+        class="main-img clickable"
+        alt="Merch Store"
+      >
 
+      <h3>Online Merch Store Website</h3>
 
-/* ---------------------------------------------------------
-   MODAL INFORMATION
---------------------------------------------------------- */
+      <p>
+        E-commerce website concept designed for an online merchandise store,
+        focusing on product presentation, navigation, and responsive UI.
+      </p>
 
-.modal-info {
+      <div class="sub-gallery">
 
-    padding: 30px;
-}
+        <img src="images/MerchStore/pr.jpeg" class="clickable" alt="Products">
 
+        <img src="images/MerchStore/con.jpeg" class="clickable" alt="Contact">
 
-.modal-info h2 {
+        <img src="images/MerchStore/ab.jpeg" class="clickable" alt="About">
 
-    margin: 0 0 10px;
+        <img src="images/MerchStore/ser.jpeg" class="clickable" alt="Services">
 
-    font-size:
-        clamp(25px, 4vw, 36px);
+      </div>
 
-    line-height: 1.1;
+      <a
+        href="https://github.com/RuchiDissa/merchStore"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
 
-    letter-spacing: -.04em;
-}
+    </div>
 
 
-.modal-info p:not(.eyebrow) {
+    <!-- =========================
+         RESIDENTIAL VILLA
+    ========================== -->
 
-    max-width: 760px;
+    <div class="project-card" onclick="toggleGallery(this)">
 
-    margin:
-        0 0 20px;
+      <img
+        src="images/Villa/1.jpeg"
+        class="main-img clickable"
+        alt="Residential Villa Project"
+      >
 
-    color: var(--muted);
+      <h3>Residential Villa Project Proposal Website</h3>
 
-    font-size: 12px;
+      <p>
+        Professional proposal website created to present a residential villa
+        project through a modern visual interface, project information,
+        and property-focused presentation.
+      </p>
 
-    line-height: 1.75;
-}
+      <div class="sub-gallery">
 
+        <img
+          src="images/Villa/1.jpeg"
+          class="clickable"
+          alt="Villa Homepage"
+        >
 
-/* ---------------------------------------------------------
-   CLOSE BUTTON
---------------------------------------------------------- */
+        <img
+          src="images/Villa/2.jpeg"
+          class="clickable"
+          alt="Villa Project"
+        >
 
-.project-modal .close {
+        <img
+          src="images/Villa/3.jpeg"
+          class="clickable"
+          alt="Villa Design"
+        >
 
-    position: absolute;
+        <img
+          src="images/Villa/4.jpeg"
+          class="clickable"
+          alt="Villa Presentation"
+        >
 
-    top: 14px;
-    right: 14px;
+      </div>
 
-    z-index: 20;
+      <a
+        href="https://github.com/RuchiDissa/residensial-villa-demo"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
 
-    width: 38px;
-    height: 38px;
+    </div>
 
-    display: flex;
+    <!-- =========================
+         Portfolio Website
+    ========================== -->
 
-    align-items: center;
-    justify-content: center;
+    <div class="project-card" onclick="toggleGallery(this)">
 
-    border:
-        1px solid
-        rgba(255,255,255,.12);
+      <img
+        src="images/Pro/1.jpeg"
+        class="main-img clickable"
+        alt="Portfolio Website"
+      >
 
-    border-radius: 10px;
+      <h3>My Portfolio Website</h3>
 
-    background:
-        rgba(7,11,20,.85);
+      <p>
+        Website that create to show my personal works
+      </p>
 
-    color: #fff;
+      <div class="sub-gallery">
 
-    font-size: 23px;
+        <img
+          src="images/Pro/1.jpeg"
+          class="clickable"
+          
+        >
 
-    cursor: pointer;
+        <img
+          src="images/Pro/2.jpeg"
+          class="clickable"
+          
+        >
 
-    backdrop-filter: blur(10px);
+        <img
+          src="images/Pro/3.jpeg"
+          class="clickable"
+          
+        >
 
-    transition:
-        background .2s ease,
-        color .2s ease;
-}
+        <img
+          src="images/Pro/4.jpeg"
+          class="clickable"
+          
+        >
 
+        <img
+          src="images/Pro/5.jpeg"
+          class="clickable"
+          
+        >
 
-.project-modal .close:hover {
+        <img
+          src="images/Pro/6.jpeg"
+          class="clickable"
+  
+        >
 
-    background:
-        var(--cyan);
+      </div>
 
-    color:
-        #07101a;
-}
+      <a
+        href="https://github.com/RuchiDissa/ruchira-dissanayaka.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
 
+    </div>
 
-/* Prevent page behind modal from scrolling */
+    <!-- =========================
+         EvoChat bot
+    ========================== -->
 
-body.modal-open {
+    <div class="project-card" onclick="toggleGallery(this)">
 
-    overflow: hidden;
-}
+      <img
+        src="images/Evo/1.png"
+        class="main-img clickable"
+        alt="EvoChat bot"
+      >
 
+      <h3>EvoChat bot</h3>
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+      <p>
+        EvoChat is a lightweight Python-based GUI chatbot project designed to evolve from a basic conversational system into an adaptive and learning AI chatbot through incremental development.
+      </p>
 
-@media (max-width: 900px) {
+      <div class="sub-gallery">
 
-    .project-gallery {
+        <img
+          src="images/Evo/1.png"
+          class="clickable"
+        >
 
-        min-height: 400px;
+        <img
+          src="images/Evo/2.png"
+          class="clickable"
+        >
 
+      </div>
+
+      <a
+        href="https://github.com/RuchiDissa/EvoChat_bot"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
+
+    </div>
+
+    <!-- =========================
+        Life Management Website
+    ========================== -->
+
+    <div class="project-card" onclick="toggleGallery(this)">
+
+      <img
+        src="images/Life_Management/1.jpeg"
+        class="main-img clickable"
+        alt="Life Management"
+      >
+
+      <h3>Life Management Website</h3>
+
+      <p>
+        Life management website create to manage schedule, work out, finace and habit
+      </p>
+
+      <div class="sub-gallery">
+
+        <img
+          src="images/Life_Management/1.jpeg"
+          class="clickable"
+        >
+
+        <img
+          src="images/Life_Management/2.jpeg"
+          class="clickable"
+        >
+
+      </div>
+
+      <a
+        href="https://github.com/RuchiDissa/LifeManagement"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
+
+    </div>
+
+    
+    <!-- =========================
+         Black Jack Game
+    ========================== -->
+
+    <div class="project-card" onclick="toggleGallery(this)">
+
+      <img
+        src="images/jackBlack/1.png"
+        class="main-img clickable"
+        alt="Black jack game"
+      >
+
+      <h3>Black Jack Game</h3>
+
+      <p>
+        A simple and interactive Blackjack game built with HTML, CSS, and JavaScript. This project was created to practice JavaScript fundamentals such as variables, functions, arrays, objects, loops, conditional statements, random numbers, and DOM manipulation.
+      </p>
+
+      <div class="sub-gallery">
+
+        <img
+          src="images/jackBlack/1.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/jackBlack/2.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/jackBlack/3.png"
+          class="clickable"
+        >
+
+      </div>
+
+      <a
+        href="https://github.com/RuchiDissa/blackjackGame"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
+
+    </div>
+
+     <!-- =========================
+         Password Generator
+    ========================== -->
+
+    <div class="project-card" onclick="toggleGallery(this)">
+
+      <img
+        src="images/passGen/1.png"
+        class="main-img clickable"
+        alt="Password Gnerator"
+      >
+
+      <h3>Password Generator</h3>
+
+      <p>
+         simple and modern Random Password Generator built with HTML, CSS, and JavaScript. The application generates two random 15-character passwords using a combination of uppercase letters, lowercase letters, numbers, and special characters.
+      </p>
+
+      <div class="sub-gallery">
+
+        <img
+          src="images/passGen/1.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/passGen/2.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/passGen/3.png"
+          class="clickable"
+        >
+
+      </div>
+
+      <a
+        href="https://github.com/RuchiDissa/passwordGenarator"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
+
+    </div>
+
+    <!-- =========================
+         Clients_management_application
+    ========================== -->
+
+    <div class="project-card" onclick="toggleGallery(this)">
+
+      <img
+        src="images/clients_management/1.png"
+        class="main-img clickable"
+        alt="client_management"
+      >
+
+      <h3>Client Management Application</h3>
+
+      <p>
+      Client management application created using c# to tracking booking and saving user and booking details in database and user login by roles   
+      </p>
+
+      <div class="sub-gallery">
+
+        <img
+          src="images/clients_management/1.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/2.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/3.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/4.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/5.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/6.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/7.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/8.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/9.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/10.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/11.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/12.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/13.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/14.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/15.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/16.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/17.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/18.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/19.png"
+          class="clickable"
+        >
+
+        <img
+          src="images/clients_management/20.png"
+          class="clickable"
+        >
+
+      </div>
+
+      <a
+        href="https://github.com/RuchiDissa/Client_Management_application_C-"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
+
+    </div>
+    
+    <!-- =========================
+         TIC TAC TOE
+    ========================== -->
+
+    <div class="project-card" onclick="toggleGallery(this)">
+
+      <img
+        src="images/tictactoe/tichome.png"
+        class="main-img clickable"
+        alt="Tic Tac Toe AI"
+      >
+
+      <h3>Tic-Tac-Toe AI Game</h3>
+
+      <p>
+        Self-learning project developed using Python and Tkinter,
+        featuring a playable Tic-Tac-Toe game with an AI opponent.
+      </p>
+
+      <div class="sub-gallery">
+
+        <img
+          src="images/tictactoe/ticnew.png"
+          class="clickable"
+          alt="New Game"
+        >
+
+        <img
+          src="images/tictactoe/ticplay.png"
+          class="clickable"
+          alt="Gameplay"
+        >
+
+      </div>
+
+      <a
+        href="https://github.com/RuchiDissa/Tic-Tac-Toe"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
+
+    </div>
+
+    <!-- =========================
+         CALCULATOR
+    ========================== -->
+
+    <div class="project-card" onclick="toggleGallery(this)">
+
+      <img
+        src="images/calculator/calhome.png"
+        class="main-img clickable"
+        alt="Python Calculator"
+      >
+
+      <h3>Python Calculator</h3>
+
+      <p>
+        Simple desktop calculator developed using Python and Tkinter
+        as a self-learning project to strengthen programming fundamentals
+        and GUI development skills.
+      </p>
+
+      <a
+        href="https://github.com/RuchiDissa/Basic_calculator"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub →
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+  <!-- =========================
+     PROJECT DEPLOY VIDEOS
+========================= -->
+
+<section class="section project-videos-section">
+
+  <h2>Project Deploy Videos</h2>
+
+  <p class="project-videos-intro">
+    Explore demonstrations and deployment videos of my projects.
+  </p>
+
+  <div class="project-videos-grid">
+
+    <!-- AI Resume Classifier -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+        poster="images/resumeClassifier/achome.jpeg"
+      >
+        <source src="videos/AiResumeClassifier.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>AI Resume Classifier & Job Role Matcher</h3>
+        <p>
+          AI-powered resume analysis and job role matching
+          application using NLP and machine learning.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- Client Management -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/clients_mangement.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>Client Management System</h3>
+        <p>
+          C# Windows Forms application with MySQL database
+          integration for managing clients and bookings.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- Coffee Shop -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/coffeShop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>Coffee Shop Management System</h3>
+        <p>
+          C# desktop application for managing coffee shop
+          products, orders, and customer transactions.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- BlackJack Game -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/blackJack.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>BlackJack Game</h3>
+        <p>
+          HTML, CSS, JAVASCRIPT browser application for play blackjack game.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Random Password Generator -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/passwordGenerator.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>Random Password Generator</h3>
+        <p>
+          HTML, CSS, JAVASCRIPT application for Generating secure random passwords.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Car Park Control -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/carPark.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>Car Park Control</h3>
+        <p>
+          MATLAB Desktop application for manage car park entry/exit control and other
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Merch Store -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/merchStore.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>Merch Store</h3>
+        <p>
+          Merch store website for manage merch bussiness
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Foreign Language Course -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/foreignWeb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>Foreign Language Course Website</h3>
+        <p>
+          Foreign language course website for manage foreign language courses
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Resident villa website -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/residentVilla.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>Resident Villa Website</h3>
+        <p>
+          Resident villa website to manage and show available real estate
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Life Management website -->
+    <div class="project-video-card">
+
+      <video
+        class="project-video-player"
+        controls
+        preload="metadata"
+      >
+        <source src="videos/lifemanage.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="project-video-content">
+        <h3>Life Management Website</h3>
+        <p>
+          Life management website for manage schedules, finances, workouts, habits
+        </p>
+      </div>
+
+    </div>
+
+
+  
+</section>
+  
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+
+<section class="section contact">
+
+  <h2>Contact Me</h2>
+
+  <div class="contact-box">
+
+    <p>
+      I’m interested in opportunities involving software development,
+      AI systems, full-stack applications, and mobile development.
+      Let’s build something meaningful together.
+    </p>
+
+    <div class="contact-links">
+
+      <a href="mailto:ruchiradissanayaka@email.com">
+        📧 Email
+      </a>
+
+      <a
+        href="https://github.com/RuchiDissa"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        💻 GitHub
+      </a>
+
+      <a
+        href="https://linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🔗 LinkedIn
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  © 2026 Ruchira Dissanayaka
+
+</footer>
+
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div class="lightbox" id="lightbox">
+
+  <span onclick="closeLightbox()">×</span>
+
+  <img id="lightbox-img" alt="Project Preview">
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function toggleGallery(card) {
+
+  document.querySelectorAll('.project-card').forEach(c => {
+
+    if (c !== card) {
+      c.classList.remove('active');
     }
 
+  });
 
-    .gallery-main {
-
-        height: 450px;
-
-    }
+  card.classList.toggle('active');
 
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+// =========================
+// LIGHTBOX
+// =========================
 
-@media (max-width: 600px) {
+document.querySelectorAll('.clickable').forEach(img => {
 
-    .project-image {
+  img.addEventListener('click', e => {
 
-        height: auto;
+    e.stopPropagation();
 
-        aspect-ratio: 16 / 10;
+    document.getElementById('lightbox-img').src = img.src;
 
-    }
+    document.getElementById('lightbox').classList.add('show');
 
+  });
 
-    .project-image img {
+});
 
-        object-fit: cover;
 
-    }
+function closeLightbox() {
 
-
-    .project-card[data-category="mobile"]
-    .project-image img {
-
-        object-fit: contain;
-
-        padding: 14px;
-
-    }
-
-
-    .modal {
-
-        padding: 8px;
-
-    }
-
-
-    .modal-card.project-modal {
-
-        width: 100%;
-
-        max-height:
-            calc(100dvh - 16px);
-
-        border-radius: 16px;
-
-    }
-
-
-    .project-gallery {
-
-        min-height: 0;
-
-        border-radius:
-            16px 16px 0 0;
-
-    }
-
-
-    .gallery-main {
-
-        height:
-            min(70vh, 480px);
-
-    }
-
-
-    .gallery-main img {
-
-        padding: 12px;
-
-    }
-
-
-    .gallery-btn {
-
-        width: 38px;
-        height: 38px;
-
-        font-size: 25px;
-
-    }
-
-
-    .gallery-prev {
-
-        left: 8px;
-
-    }
-
-
-    .gallery-next {
-
-        right: 8px;
-
-    }
-
-
-    .gallery-counter {
-
-        bottom: 10px;
-
-        font-size: 8px;
-
-    }
-
-
-    .gallery-thumbs {
-
-        padding: 10px;
-
-        gap: 7px;
-
-    }
-
-
-    .gallery-thumb {
-
-        flex-basis: 68px;
-
-        width: 68px;
-
-        height: 52px;
-
-    }
-
-
-    .modal-info {
-
-        padding:
-            22px 18px 24px;
-
-    }
-
-
-    .modal-info h2 {
-
-        font-size: 25px;
-
-    }
-
-
-    .modal-info p:not(.eyebrow) {
-
-        font-size: 11px;
-
-    }
+  document
+    .getElementById('lightbox')
+    .classList.remove('show');
 
 }
 
 
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
+document.getElementById('lightbox').addEventListener('click', function(e) {
 
-@media (max-width: 380px) {
+  if (e.target === this) {
+    closeLightbox();
+  }
 
-    .gallery-main {
-
-        height: 390px;
-
-    }
+});
 
 
-    .gallery-main img {
-
-        padding: 8px;
-
-    }
+</script>
 
 
-    .gallery-btn {
-
-        width: 34px;
-        height: 34px;
-
-        font-size: 22px;
-
-    }
-
-}
-
-
-/* =========================================================
-   TOUCH DEVICES
-========================================================= */
-
-@media (hover: none) {
-
-    .project-card:hover
-    .project-image img {
-
-        transform: none;
-
-    }
-
-}
+</body>
+</html>
+```
